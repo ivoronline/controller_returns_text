@@ -1,16 +1,20 @@
 package com.ivoronline.controller_returns_text.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+@RequestMapping("Start")          //URLs of all Endpoints start with this prefix
 public class MyController {
 
-  @RequestMapping("/hello")
+  //============================================================================
+  // HELLO
+  //============================================================================
   @ResponseBody
-  public String sayHello() {
-    return "Message from Controller";
+  @RequestMapping("Hello")
+  public String hello() {
+    return "Hello from Controller";
   }
 
 }
